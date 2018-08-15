@@ -1,0 +1,32 @@
+*{
+  margin: 0;
+  padding: 0;
+  word-wrap: break-word;
+  word-break: break-all;
+  box-sizing: border-box;
+}
+html {
+  font-size: 100%;
+  overflow: -moz-scrollbars-vertical; /*firefox 始终显示滚动条*/
+}
+body{
+  background: #fff;
+  color: #333;
+  font: 14px/1.6em Helvetica,Arial,sans-serif;
+}
+a{
+  color: #0287ca;
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: none;
+}
+ul,li{
+  list-style: none;
+}
+img{
+  border: none;
+}
+h1,h2,h3,h4,h5,h6{
+  font-size: 1em;
+}

@@ -1,0 +1,124 @@
+
+#header #logo-box {
+  width:100%;
+  height: 80px;
+  overflow:hidden;
+  background-color:#3b5998;
+}
+#header #logo {
+  display: inline-block;
+  width: 200px;
+  height: 80px;
+  line-height: 80px;
+  font-size: 30px;
+  text-align: center;
+  color:#f1f1f1;
+  user-select: none;
+}
+#header #logo:hover {
+  color:#e1e1e1;
+  text-shadow:0 0 10px #fff;
+}
+#header #skin-box {
+  float:right;
+  list-style:none;
+  margin:10px;
+  padding:4px;
+  border:1px solid #ccc;
+  background-color:#fff;
+}
+#header #skin-box li {
+  float:left;
+  width:15px;
+  height:15px;
+  display:block;
+  cursor:pointer;
+  overflow:hidden;
+  position:relative;
+  opacity:0.9;
+}
+#header #skin-box li + li {
+  margin-left:5px;
+}
+#header #skin-box li:hover {
+  opacity:1;
+}
+#header #skin-box li:first-child {
+  background-color:green;
+}
+#header #skin-box li:nth-child(2) {
+  background-color:blue;
+}
+#header #skin-box li:nth-child(3) {
+  background-color:red;
+}
+#header #skin-box li:nth-child(4) {
+  background-color:navy;
+}
+#header #skin-box li:nth-child(5) {
+  background-color:yellow;
+}
+#header #skin-box li:nth-child(6) {
+  background-color:orange;
+}
+#header #skin-box li.active:after {
+  content:'√';
+  display:block;
+  position:absolute;
+  top:-2px;
+  left:3px;
+  width:100%;
+  height:100%;
+  z-index:99;
+  color:#fff;
+}
+#navigation {
+  height:30px;
+  background-color:#3b5998;
+  margin:8px auto;
+}
+#navigation > ul{
+  list-style:none;
+  padding: 0 10px;
+  height:30px;
+  display:flex;
+  align-items:center;
+}
+#navigation > ul > li{
+  float:left;
+  margin-right:14px;
+  z-index:100;
+  position:relative;
+}
+#navigation > ul > li > a {
+  display:block;
+  height:100%;
+  padding:0 18px;
+  background:#eee;
+}
+
+#navigation > ul > li > a:hover {
+  color:#3b5998;
+}
+#navigation > ul > li > ul {
+  position:absolute;
+  top:22px;
+  display:none;
+  visibility:hidden;
+  background-color: #eee;
+  opacity:0;
+  min-width:100%;
+}
+#navigation > ul > li:hover > ul {
+  visibility:visible;
+  opacity:1;
+  display:block;
+  transition:opacity 1s ease;
+}
+#navigation > ul > li > ul > li > a {
+  padding:4px 5px;
+  display: block;
+}
+#navigation > ul > li > ul > li > a:hover{
+  color:#3b5998;
+}
