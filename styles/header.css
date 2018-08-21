@@ -47,7 +47,7 @@
   background-color:green;
 }
 #header #skin-box li:nth-child(2) {
-  background-color:blue;
+  background-color:#3b5998;
 }
 #header #skin-box li:nth-child(3) {
   background-color:red;
@@ -56,7 +56,7 @@
   background-color:navy;
 }
 #header #skin-box li:nth-child(5) {
-  background-color:yellow;
+  background-color: lime;
 }
 #header #skin-box li:nth-child(6) {
   background-color:orange;
@@ -95,6 +95,8 @@
   height:100%;
   padding:0 18px;
   background:#eee;
+  font-weight:600;
+  color: #0287ca;
 }
 
 #navigation > ul > li > a:hover {
@@ -103,17 +105,16 @@
 #navigation > ul > li > ul {
   position:absolute;
   top:22px;
-  display:none;
-  visibility:hidden;
-  background-color: #eee;
-  opacity:0;
   min-width:100%;
+   display:none;
 }
 #navigation > ul > li:hover > ul {
-  visibility:visible;
-  opacity:1;
   display:block;
-  transition:opacity 1s ease;
+  background-color: #eee;
+}
+#navigation > ul > li > ul > li {
+  border-bottom:1px solid #ccc;
+  text-align: left;
 }
 #navigation > ul > li > ul > li > a {
   padding:4px 5px;

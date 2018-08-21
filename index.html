@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Welcome to Hazel Mall - jQuery version</title>
+  <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="stylesheet" href="./styles/main.css" />
 </head>
 <body>
@@ -16,7 +17,7 @@
         <li title='蓝色'></li>
         <li title='红色'></li>
         <li title='天蓝色'></li>
-        <li title='黄色'></li>
+        <li title='柠檬'></li>
         <li title='橙色'></li>
       </ul>
     </div>
@@ -32,30 +33,68 @@
         </li>
         <li><a href="">卫 衣</a>
           <ul>
-            <li>
-              <a href="#">套头卫衣</a>
-            </li>
-            <li>
-              <a href="#">开襟卫衣</a>
-            </li>
+            <li><a href="#">套头卫衣</a></li>
+            <li><a href="#">开襟卫衣</a></li>
           </ul>
         </li>
-        <li>
-          <a href="">裤 子</a>
+        <li><a href="">裤 子</a>
           <ul>
-            <li>
-              <a href="#">长裤</a>
-            </li>
-            <li>
-              <a href="#">短裤</a>
-            </li>
+            <li><a href="#">长裤</a></li>
+            <li><a href="#">短裤</a></li>
           </ul>
         </li>
         <li><a href="#">联系我们</a></li>
       </ul>
     </nav>
   </header>
-  <main id='main-body'></main>
+  <main id='main-body'>
+    <div class='content-left'>
+      <div class='news'>
+        <h3>最新动态<i class="fa fa-angle-double-down" aria-hidden="true"></i></h3>
+        <ul>
+          <li><a href="#">女装 优质长绒棉提花上衣(短袖)</a></li>
+          <li><a href="#">女装 (UT) S Sanderson全棉立领印花上衣(长袖)</a></li>
+          <li><a href="#">男装 束脚运动裤</a></li>
+          <li><a href="#">男装 牛仔工装修身衬衫(水洗产品)(长袖)</a></li>
+        </ul>
+      </div>
+      <div class='category'>
+        <h3>产品分类<i class="fa fa-angle-double-down" aria-hidden="true"></i></h3>
+          <ul>
+            <li>衬衫
+              <ul>
+                <li><a href="#">短袖衬衫</a></li>
+                <li><a href="#">长袖衬衫</a></li>
+                <li><a href="#">无袖衬衫</a></li>
+              </ul>
+            </li>
+            <li>卫衣
+              <ul>
+                <li><a href="#">套头卫衣</a></li>
+                <li><a href="#">开襟卫衣</a></li>
+              </ul>
+            </li>
+            <li>裤子
+              <ul>
+                <li><a href="#">长裤</a></li>
+                <li><a href="#">短裤</a></li>
+              </ul>
+            </li>
+          </ul>
+      </div>
+    </div>
+    <div class='content-right'>
+sdfds
+    </div>
+  </main>
   <footer id='footer'></footer>
+  <script src='https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js'></script>
+  <script>
+    $(function(){
+      $('#skin-box li').on('click', function(){
+        $(this).siblings().removeClass('active').end().addClass('active');
+      })
+    })
+  </script>
 </body>
 </html>

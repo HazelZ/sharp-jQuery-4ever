@@ -2,3 +2,46 @@
 @import './header.css';
 @import './footer.css';
 
+a{
+  color:#333;
+}
+
+#main-body {
+  padding: 0 10px;
+  overflow: hidden;
+}
+#main-body  .content-left{
+  width:230px;
+  border:1px solid #aaa;
+  float:left;
+}
+#main-body  .content-left .news h3,
+#main-body  .content-left .category h3{
+  background-color:#3b5998;
+  color:#fff;
+  padding:5px;
+}
+#main-body  .content-left .news h3 .fa-angle-double-down,
+#main-body  .content-left .category h3 .fa-angle-double-down{
+  float:right;
+  padding: 5px;
+  cursor:pointer;
+  opacity:0.8;
+}
+#main-body  .content-left .news h3 .fa-angle-double-down:hover,
+#main-body  .content-left .category h3 .fa-angle-double-down:hover{
+  opacity:1;
+}
+#main-body  .content-left .news > ul > li,
+#main-body  .content-left .category > ul > li{
+  padding:0 5px;
+}
+#main-body  .content-left .news > ul > li a{
+  display:block;
+  width:100%;
+  overflow:hidden;
+  text-overflow: ellipsis;
+}
+#main-body  .content-right{
+  padding-left:240px;
+}
