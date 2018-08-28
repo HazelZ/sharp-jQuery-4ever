@@ -60,22 +60,25 @@
       </div>
       <div class='category'>
         <h3>产品分类<i class="fa fa-angle-double-down" aria-hidden="true"></i></h3>
-          <ul>
-            <li>衬衫
-              <ul>
+          <ul id='menu'>
+            <li class='menu-item'>
+              <div class='link'>衬衫</div>
+              <ul class='sub-ul'>
                 <li><a href="#">短袖衬衫</a></li>
                 <li><a href="#">长袖衬衫</a></li>
                 <li><a href="#">无袖衬衫</a></li>
               </ul>
             </li>
-            <li>卫衣
-              <ul>
+            <li class='menu-item'>
+              <div class='link'>卫衣</div>
+              <ul class='sub-ul'>
                 <li><a href="#">套头卫衣</a></li>
                 <li><a href="#">开襟卫衣</a></li>
               </ul>
             </li>
-            <li>裤子
-              <ul>
+            <li class='menu-item'>
+              <div class='link'>裤子</div>
+              <ul class='sub-ul'>
                 <li><a href="#">长裤</a></li>
                 <li><a href="#">短裤</a></li>
               </ul>
@@ -93,6 +96,12 @@ sdfds
     $(function(){
       $('#skin-box li').on('click', function(){
         $(this).siblings().removeClass('active').end().addClass('active');
+      })
+      $('#menu > .menu-item .link').on('click', function(){
+        var $this = $(this), $next = $this.next();
+        $next.slideToggle();
+        $this.parent().toggleClass('open');
+        $this.parent().siblings().find('.sub-ul').slideUp().parent().removeClass('open');
       })
     })
   </script>
