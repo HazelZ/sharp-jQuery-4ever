@@ -106,7 +106,7 @@
   position:absolute;
   top:22px;
   min-width:100%;
-   display:none;
+  display:none;
 }
 #navigation > ul > li:hover > ul {
   display:block;

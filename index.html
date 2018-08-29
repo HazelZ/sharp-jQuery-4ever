@@ -23,15 +23,15 @@
     </div>
     <nav id='navigation'>
       <ul>
-        <li><a href="">首 页</a></li>
-        <li><a href="">衬 衫</a>
+        <li><a href="#">首 页</a></li>
+        <li><a href="#">衬 衫</a>
             <ul>
               <li><a href="#">短袖衬衫</a></li>
               <li><a href="#">长袖衬衫</a></li>
               <li><a href="#">无袖衬衫</a></li>
             </ul>
         </li>
-        <li><a href="">卫 衣</a>
+        <li><a href="#">卫 衣</a>
           <ul>
             <li><a href="#">套头卫衣</a></li>
             <li><a href="#">开襟卫衣</a></li>
@@ -62,24 +62,32 @@
         <h3>产品分类<i class="fa fa-angle-double-down" aria-hidden="true"></i></h3>
           <ul id='menu'>
             <li class='menu-item'>
-              <div class='link'>衬衫</div>
+              <div class='link'><i class="fa fa-sort-desc" aria-hidden="true"></i>衬衫</div>
               <ul class='sub-ul'>
                 <li><a href="#">短袖衬衫</a></li>
                 <li><a href="#">长袖衬衫</a></li>
                 <li><a href="#">无袖衬衫</a></li>
+                <li><a href="#">无袖衬衫</a></li>
+                <li><a href="#">无袖衬衫</a></li>
+                <li><a href="#">无袖衬衫</a></li>
               </ul>
             </li>
             <li class='menu-item'>
-              <div class='link'>卫衣</div>
+              <div class='link'><i class="fa fa-sort-desc" aria-hidden="true"></i>卫衣</div>
               <ul class='sub-ul'>
                 <li><a href="#">套头卫衣</a></li>
+                <li><a href="#">开襟卫衣</a></li>
+                <li><a href="#">开襟卫衣</a></li>
+                <li><a href="#">开襟卫衣</a></li>
                 <li><a href="#">开襟卫衣</a></li>
               </ul>
             </li>
             <li class='menu-item'>
-              <div class='link'>裤子</div>
+              <div class='link'><i class="fa fa-sort-desc" aria-hidden="true"></i>裤子</div>
               <ul class='sub-ul'>
                 <li><a href="#">长裤</a></li>
+                <li><a href="#">短裤</a></li>
+                <li><a href="#">短裤</a></li>
                 <li><a href="#">短裤</a></li>
               </ul>
             </li>
@@ -87,11 +95,26 @@
       </div>
     </div>
     <div class='content-right'>
-sdfds
+      <div id="main-banner">
+        <ul class='slide'>
+          <li class='active'><img src="./imgs/26.jpg" alt="b1" /></li>
+          <li><img src="./imgs/27.jpg" alt="b2" /></li>
+          <li><img src="./imgs/28.jpg" alt="b3" /></li>
+          <li><img src="./imgs/29.jpg" alt="b4" /></li>
+        </ul>
+        <ul class='num'>
+          <li class='active'></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+      <div id="new-arrival">新款</div>
     </div>
   </main>
   <footer id='footer'></footer>
   <script src='https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js'></script>
+  <script src='./scripts/hSlide.js'></script>
   <script>
     $(function(){
       $('#skin-box li').on('click', function(){
@@ -102,6 +125,23 @@ sdfds
         $next.slideToggle();
         $this.parent().toggleClass('open');
         $this.parent().siblings().find('.sub-ul').slideUp().parent().removeClass('open');
+      })
+      // slide 思路
+      // 图片列表 + 圆点列表
+      // 点击圆点列表，显示相应顺序的图片
+      // 点击箭头，显示相应的图片
+      // 什么都不做的情况下，图片自动按顺序轮播
+      
+      $('#main-banner .num li').on('click',function(){
+        let $this = $(this);
+        let $slide = $this.parent().prev().find('li');
+        if($this.hasClass('active')){
+          return
+        }else{
+          $this.addClass('active').siblings().removeClass('active');
+          $slide.eq($(this).index()).addClass('active').siblings().removeClass('active');
+        }
+        // console.log($(this).index())
       })
     })
   </script>
